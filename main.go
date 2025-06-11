@@ -29,4 +29,11 @@ func main() {
 	for index, c := range cm.ContactList() {
 		fmt.Printf("Contact %d: %v\n", index, c)
 	}
+
+	c, ok := cm.GetContactByEmail("kd@email.com")
+	if ok {
+		fmt.Printf("Contact by email: %v\n", c)
+	} else {
+		fmt.Println("Contact by email not found")
+	}
 }
